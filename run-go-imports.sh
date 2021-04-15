@@ -5,5 +5,5 @@
 set -e
 
 exec 5>&1
-output="$(goimports -l -w "$@" | tee /dev/fd/5)"
+output=$(goimports -w "$(go list -f '{{.Dir}}' ./... | grep -v /vendor/)" | tee /dev/fd/5)
 [[ -z "$output" ]]
