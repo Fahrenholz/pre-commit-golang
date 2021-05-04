@@ -16,6 +16,12 @@
     files: '\.go$'
     language: 'script'
     description: "Runs `goimports`, requires golang"
+-   id: gci
+    name: 'gci'
+    entry: run-gci.sh
+    files: '\.go$'
+    language: 'script'
+    description: "Runs `gci`, requires https://github.com/daixiang0/gci"
 -   id: go-vet
     name: 'go vet'
     entry: run-go-vet.sh
