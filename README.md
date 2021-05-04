@@ -12,6 +12,7 @@ Add this to your `.pre-commit-config.yaml`
       rev: master
       hooks:
         - id: go-fmt
+        - id: gofumpt
         - id: go-vet
         - id: go-lint
         - id: go-imports
@@ -29,6 +30,7 @@ Add this to your `.pre-commit-config.yaml`
 ### Available hooks
 
 - `go-fmt` - Runs `gofmt`, requires golang
+- `gofumpt` - Runs `gofumpt`, requires golang
 - `go-vet` - Runs `go vet`, requires golang
 - `go-lint` - Runs `golint`, requires https://github.com/golang/lint
 - `go-imports` - Runs `goimports`, requires golang.org/x/tools/cmd/goimports
