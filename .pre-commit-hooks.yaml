@@ -4,6 +4,12 @@
     files: '\.go$'
     language: 'script'
     description: "Runs `gofmt`, requires golang"
+-   id: gofumpt
+    name: 'gofumpt'
+    entry: run-gofumpt.sh
+    files: '\.go$'
+    language: 'script'
+    description: "Runs `gofumpt`, requires https://github.com/mvdan/gofumpt"
 -   id: go-imports
     name: 'go imports'
     entry: run-go-imports.sh
