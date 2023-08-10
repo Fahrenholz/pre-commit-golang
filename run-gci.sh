@@ -8,5 +8,5 @@ set -e
 
 exec 5>&1
 FILES=$(find . -name '*.go' | grep -v vendor | grep -v infrastructure)
-output="$(gci -w $FILES | grep -v "since no import" | tee /dev/fd/5)"
+output="$(gci write $FILES | grep -v "since no import" | tee /dev/fd/5)"
 [[ -z "$output" ]]
